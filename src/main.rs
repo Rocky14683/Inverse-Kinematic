@@ -15,8 +15,8 @@ fn main() {
         .build();
     // let mut seg = segment::Segment::new(0.0, 0.0, 200.0, 0.0, 5.0);
     let mut seg_collection = seg_collection::SegCollection::new();
-    for i in 0..50 {
-        seg_collection.add_segment(0.0, 0.0, 10.0, 0.0, 5.0);
+    for i in 0..1000 {
+        seg_collection.add_segment(0.0, 0.0, 1.0, 0.0, 3.0);
     }
 
     while !rl.window_should_close() {

@@ -18,14 +18,9 @@ impl SegCollection {
         }
 
         let mut pos = self.segments[0].follow(tx, ty);
-        for seg in self.segments.iter_mut().skip(1){
+        for seg in self.segments.iter_mut().skip(0){
             pos = seg.follow(pos.x, pos.y);
         }
-
-        let last_idx = self.segments.len() - 1;
-
-        self.segments[last_idx].update();
-        self.segments[last_idx].show(handle);
 
         for seg in self.segments.iter_mut().rev() {
             seg.update();
